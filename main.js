@@ -1,12 +1,12 @@
-const express = require("express")
-const app = express()
-port = 5000
+const express = require("express");
+const app = express();
+port = 5000;
 
 //Static files
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
 app.use("/js", express.static(__dirname + "public/js"));
-app.use("/img", express.static(__dirname + "public/img"));
+app.use("/imgs", express.static(__dirname + "public/imgs"));
 app.use("/json", express.static(__dirname + "public/json"));
 
 //templating Engine

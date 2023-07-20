@@ -14,13 +14,24 @@ pageRouter.get("/", async(req,res) =>{
     res.render("index");
 });
 
-
-//last route
-pageRouter.get("*", async(req,res) =>{
+pageRouter.get("/games", async(req,res) =>{
 
     //example of how can be implemented new routes
+    res.render("games");
+});
+
+
+pageRouter.get("/test", async(req,res) =>{
+
+    res.render("test");
+});
+
+//MUST be the last route
+pageRouter.get("*", async(req,res) =>{
+
     res.render("404");
 });
+
 //###################
 //# ROUTES FOR DATA #
 //###################
